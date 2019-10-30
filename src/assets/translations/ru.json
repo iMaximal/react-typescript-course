@@ -1,0 +1,122 @@
+{
+  "login": {
+    "title": "Вход",
+    "description": "Войдите в Вашу учетную запись",
+    "signup": "Зарегистрироваться",
+    "signupDescription": "Бесплатно. Не стесняйтесь использовать."
+  },
+  "signup": {
+    "title": "Регистрация",
+    "description": "Создать учетную запись",
+    "login": "Войти",
+    "loginDescription": "Добро пожаловать!"
+  },
+  "404": {
+    "text": "404 Не Найдено"
+  },
+  "labels": {
+    "userId": "ID пользователя",
+    "username": "Имя пользователя",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "confirmPassword": "Подтверждение пароля",
+    "role": "Роль",
+    "status": "Статус",
+    "dropSession": "Пользователь должен выйти из системы?",
+    "searchUser": "Поиск пользователя",
+    "createdAt": "Создан",
+    "updatedAt": "Обновлен",
+    "primary": "Первичный",
+    "secondary": "Вторичный",
+    "iconSidebar": "Значок боковой панели",
+    "black": "Черный",
+    "white": "Белый",
+    "baseBackground": "Базовый фон",
+    "sidebarBackground": "Фон боковой панели",
+    "textPrimary": "Основной текст",
+    "topBarBackground": "Фон верхней панели",
+    "topBarIcon": "Значок верхней панели",
+    "deactivated": "Отключен",
+    "active": "Активен",
+    "rowsPerPage": "Строк на страницу"
+  },
+  "validators": {
+    "required": "Обязательное поле",
+    "maxLength": "Должно быть {{max}} знаков или меньше",
+    "minLength": "Должно быть {{min}} знаков или больше",
+    "number": "Должно быть числом",
+    "email": "Введите верный адрес",
+    "alphaNumeric": "Только буквы и цифры",
+    "phoneNumber": "Только цифры, пробелы и дефисы",
+    "password": "Пароль должен содержать 8+ знаков,  1+ цифр",
+    "confirmPassword": "Пароли не совпадают"
+  },
+  "buttons": {
+    "login": "Войти",
+    "registerNow": "Зарегистрируйтесь сейчас!",
+    "signup": "Создать учетную запись",
+    "save": "Сохранить",
+    "applyColors": "Применить цвета",
+    "restoreColors": "Восстановить цвета",
+    "reset": "Сбросить",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "main": "Главная",
+    "refreshUsers": "Обновить список пользователей",
+    "toggleEditMode": "Переключиться в режим редактирования"
+  },
+  "defaultError": "Что-то пошло не так",
+  "noResults": "Нет результатов",
+  "messages": {
+    "User successfully created": "Пользователь успешно создан",
+    "This username has been taken": "Данное имя пользователя уже занято",
+    "Incorrect username or password": "Неверный логин или пароль",
+    "username must be unique": "Имя должно быть уникальным",
+    "email must be unique": "Адрес электронной почты должен быть уникальным"
+  },
+  "navigation": {
+    "Dashboard": "Главная",
+    "Users": "Пользователи",
+    "Edit User": "Редактирование пользователя",
+    "Line Chart": "Линейный график"
+  },
+  "breadcrumbs": {
+    "/": "Главная",
+    "/users": "Пользователи",
+    "/users/edit/:editUserId": "Редактирование пользователя",
+    "/line-chart": "Онлайн линейный график",
+    "defaultBreadcrumb": "Ссылка"
+  },
+  "seo": {
+    "/login": {
+      "title": "Страница входа - StartUp Ready App",
+      "description": "Добро пожаловать в Новый мир."
+    },
+    "/register": {
+      "title": "Зарегистрируйтесь для удовольствия",
+      "description": "Страница регистрации для StartUp Ready App."
+    },
+    "/": {
+      "title": "Эксклюзивное React TypeScript приложение",
+      "description": "Будь готов создать минимальный ценный продукт (MVP) за месяц. Великие примеры и структура."
+    },
+    "/users": {
+      "title": "Список пользователей",
+      "description": "Управление пользователями. Вы можете редактировать и деактивировать пользователя."
+    },
+    "/users/edit/:editUserId": {
+      "title": "Редактирование пользователя",
+      "description": "Страница редактирования пользователя."
+    },
+    "/line-chart": {
+      "title": "WebSocket онлайн график",
+      "description": "Пример графика в реальном времени."
+    },
+    "defaultTitle": "React StartUp App",
+    "defaultDescription": "Удивительное и замечательное приложение исключительно для Вас с любовью."
+  },
+  "modals": {
+    "unsavedTitle": "Есть несохраненные изменения",
+    "unsavedDescription": "Вы уверены, что хотите покинуть страницу?"
+  }
+}

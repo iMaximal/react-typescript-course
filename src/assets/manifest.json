@@ -1,0 +1,15 @@
+{
+  "short_name": "React StartUp App",
+  "name": "React StartUp App and Video Guide",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#20a8d8",
+  "background_color": "#e4e5e6"
+}

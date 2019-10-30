@@ -1,0 +1,122 @@
+{
+  "login": {
+    "title": "Login",
+    "description": "Sing in to your account",
+    "signup": "Sign Up",
+    "signupDescription": "Free of charge. Feel free to use."
+  },
+  "signup": {
+    "title": "Register",
+    "description": "Create your account",
+    "login": "Login",
+    "loginDescription": "Welcome back!"
+  },
+  "404": {
+    "text": "404 Not Found"
+  },
+  "labels": {
+    "userId": "User ID",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "role": "Role",
+    "status": "Status",
+    "dropSession": "Should user logout?",
+    "searchUser": "Search User Name",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "iconSidebar": "Icon Sidebar",
+    "black": "Black",
+    "white": "White",
+    "baseBackground": "Base background",
+    "sidebarBackground": "Sidebar Background",
+    "textPrimary": "Text Primary",
+    "topBarBackground": "Top Bar Background",
+    "topBarIcon": "Top Bar Icon",
+    "deactivated": "Deactivated",
+    "active": "Active",
+    "rowsPerPage": "Rows per page"
+  },
+  "validators": {
+    "required": "Required field",
+    "maxLength": "Must be {{max}} characters or less",
+    "minLength": "Must be {{min}} characters or more",
+    "number": "Must be a number",
+    "email": "Please enter a valid email address",
+    "alphaNumeric": "Only alphanumeric characters",
+    "phoneNumber": "Only numbers, spaces and hyphens are allowed",
+    "password": "Password must contain 8+ characters,  1+ number",
+    "confirmPassword": "Passwords do not match"
+  },
+  "buttons": {
+    "login": "Log In",
+    "registerNow": "Register Now!",
+    "signup": "Create an Account",
+    "save": "Save",
+    "applyColors": "Apply colors",
+    "restoreColors": "Restore default colors",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "main": "Go to Main page",
+    "refreshUsers": "Refresh the list of users",
+    "toggleEditMode": "Toggle Edit Mode"
+  },
+  "defaultError": "Something went wrong",
+  "noResults": "No results",
+  "messages": {
+    "User successfully created": "User successfully created",
+    "This username has been taken": "This username has been taken",
+    "Incorrect username or password": "Incorrect username or password",
+    "username must be unique": "Username must be unique",
+    "email must be unique": "Email must be unique"
+  },
+  "navigation": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Edit User": "Edit User",
+    "Line Chart": "Line Chart"
+  },
+  "breadcrumbs": {
+    "/": "Dashboard",
+    "/users": "Users",
+    "/users/edit/:editUserId": "Edit User",
+    "/line-chart": "Online Line Chart",
+    "defaultBreadcrumb": "Link"
+  },
+  "seo": {
+    "/login": {
+      "title": "Login Page - StartUp Ready App",
+      "description": "Welcome to the New World."
+    },
+    "/register": {
+      "title": "Register to enjoy",
+      "description": "Registration page for StartUp Ready App."
+    },
+    "/": {
+      "title": "Exclusive React TypeScript Application",
+      "description": "Be ready to create a Minimum Valuable Product (MVP) in month. Great examples and structure."
+    },
+    "/users": {
+      "title": "Users list",
+      "description": "Manage users. You can edit and deactivate persons."
+    },
+    "/users/edit/:editUserId": {
+      "title": "Edit User",
+      "description": "User edit page."
+    },
+    "/line-chart": {
+      "title": "WebSocket Online Chart",
+      "description": "Realtime chart example."
+    },
+    "defaultTitle": "React StartUp App",
+    "defaultDescription": "Awesome and great app exclusively for You with Love."
+  },
+  "modals": {
+    "unsavedTitle": "There are unsaved changes",
+    "unsavedDescription": "Are you sure to leave the page?"
+  }
+}

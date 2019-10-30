@@ -1,0 +1,130 @@
+:global(.MuiAppBar) {
+	&-colorPrimary {
+		background-color: var(--topBarBackground)
+	}
+}
+
+:global(.MuiButton) {
+	&-root {
+		color: var(--iconSidebar)
+	}
+
+	&-contained {
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+		background-olor: var(--white)
+	}
+
+	&-containedPrimary {
+		margin-top: 1rem
+		color: var(--white)
+		background-color: var(--primary)
+
+		&:hover {
+			background-color: var(--secondary)
+		}
+	}
+
+	&-containedSecondary {
+		margin-top: 1rem
+		color: var(--white)
+		background-color: var(--secondary)
+
+		&:hover {
+			background-color: var(--primary)
+		}
+	}
+
+	&-textPrimary {
+		color: var(--primary)
+	}
+}
+
+:global(.MuiBreadcrumbs) {
+	&-ol {
+		font-size: 0.875rem
+	}
+}
+
+:global(.MuiCheckbox-colorSecondary.Mui-checked) {
+	color: var(--secondary)
+}
+
+:global(.MuiDrawer) {
+	&-paper {
+		background: var(--sidebarBackground)
+	}
+}
+
+:global(.MuiFormControl) {
+	&-root {
+		margin: 0.5rem 0
+		min-height: 4.25rem
+	}
+}
+
+:global(.MuiFormLabel-root.Mui-focused) {
+	color: var(--primary)
+}
+
+:global(.MuiIconButton) {
+	&-root {
+		color: var(--iconSidebar)
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.03)
+		}
+	}
+}
+
+:global(.MuiInput-underline:after) {
+	border-bottom: 2px solid var(--primary)
+}
+
+:global(.MuiLinearProgress) {
+	&-barColorPrimary {
+		background-color: var(--primary)
+	}
+}
+
+:global(.MuiPaper) {
+	&-elevation1 {
+		box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15)
+	}
+}
+
+:global(.MuiSelect) {
+	&-root {
+		margin: 0.5rem 0
+	}
+}
+
+:global(.MuiTableCell) {
+	&-root {
+		border-bottom: 1px solid #eeeeee
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+	}
+}
+
+:global(.MuiTableHead) {
+	&-root {
+		background-color: #fafafa
+	}
+}
+
+:global(.MuiTableRow) {
+	&:hover {
+		background-color: #ccc
+	}
+}
+
+:global(.MuiTypography) {
+	&-colorTextPrimary {
+		color: var(--textPrimary)
+	}
+
+	&-colorPrimary {
+		color: var(--primary)
+	}
+}

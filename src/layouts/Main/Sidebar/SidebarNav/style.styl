@@ -1,0 +1,41 @@
+.item {
+	display: flex
+	padding-top: 0
+	padding-bottom: 0
+
+	&:hover {
+		background-color: var(--primary)
+	}
+}
+
+.button {
+	padding: 1rem
+	justify-content: flex-start
+	text-transform: none
+	letter-spacing: 0
+	width: 100%
+	font-weight: 300
+
+	&:hover {
+		color: var(--white)
+	}
+}
+
+.title {
+	color: var(--white)
+}
+
+.icon {
+	display: flex
+	align-items: center
+	margin-right: 1rem
+}
+
+.active {
+	color: var(--white)
+	background: #3a4248
+
+	& icon {
+		color: var(--white)
+	}
+}

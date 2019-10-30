@@ -1,0 +1,40 @@
+.container {
+	position: absolute
+	left: 50%
+	transform: translate(-50%, 0)
+	z-index: 4999
+	padding: 0.75rem 1.25rem
+	margin-bottom: 1rem
+	border: 1px solid transparent
+	border-radius: 0.25rem
+	animation: slide 3s ease-out
+	animation-fill-mode: forwards
+}
+
+.error {
+	color: #813838
+	background-color: #fee2e1
+	border-color: #fdd6d6
+}
+
+.success {
+	color: #28623c
+	background-color: #dbf2e3
+	border-color: #cdedd8
+}
+
+.info {
+	color: #336573
+	background-color: #e0f3f8
+	border-color: #d3eef6
+}
+
+@keyframes slide {
+	0% {
+		top: 0
+	}
+
+	100% {
+		top: 15%
+	}
+}

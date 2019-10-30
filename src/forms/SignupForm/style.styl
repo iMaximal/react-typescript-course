@@ -1,0 +1,32 @@
+@import '~@style/variables'
+
+.twoColumn {
+	display: flex
+	flex-direction: row
+	border: $border 1px solid
+}
+
+.fieldsContainer {
+	display: flex
+	flex-direction: column
+	padding: 2rem
+	min-width: 24rem
+}
+
+.login {
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding: 3rem
+	width: 100%
+	min-width: 10rem
+	background-color: var(--primary)
+	color: var(--white)
+}
+
+@media (max-width: $screen-tablet) {
+	.twoColumn {
+		flex-flow: row wrap
+	}
+}

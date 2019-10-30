@@ -1,0 +1,150 @@
+{
+  "name": "react-typescript-course",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iMaximal/react-typescript-course.git"
+  },
+  "homepage": "https://github.com/iMaximal/react-typescript-course#readme",
+  "author": "Maksim Golitsyn",
+  "keywords": [
+    "react course",
+    "react typescript boilerplate",
+    "react admin panel"
+  ],
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "rimraf ./build && cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "lint": "tsc --project tsconfig.json && tslint --project tsconfig.json --config tslint.json",
+    "lint:fix": "tsc --project tsconfig.json && tslint --project tsconfig.json --config tslint.json --fix",
+    "stylus:fix": "stylus-supremacy format ./**/*.styl  --options ./stylus.config.json --replace",
+    "localServer": "node ./scripts/serve.js",
+    "pretesting": "npm run test:clean && npm run lint",
+    "translate": "node ./scripts/translate.js",
+    "test": "node scripts/test.js --coverage=false",
+    "test:clean": "rimraf ./coverage",
+    "test:coverage": "node scripts/test.js --coverage",
+    "test:update:snapshot": "npm run test:coverage -- -u",
+    "test:watch": "node scripts/test.js --watchAll",
+    "test:watch:lint": "npm run pretesting && node scripts/test.js --watchAll",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.styl": [
+      "stylus-supremacy format ./**/*.styl --options ./stylus.config.json --replace",
+      "git add"
+    ],
+    "src/**/*.{ts,tsx}": [
+      "prettier --config .prettierrc.js --write",
+      "tslint --project tsconfig.json --config tslint.json --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.5.0",
+    "@types/enzyme": "^3.10.3",
+    "@types/history": "^4.7.3",
+    "@types/jest": "^24.0.18",
+    "@types/lodash-es": "^4.17.3",
+    "@types/node": "^12.7.12",
+    "@types/plotly.js": "^1.44.11",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-redux": "^7.1.4",
+    "@types/react-router-dom": "^4.3.5",
+    "@types/redux-form": "^8.1.9",
+    "axios": "^0.19.0",
+    "clsx": "^1.0.4",
+    "connected-react-router": "^6.5.2",
+    "history": "^4.10.1",
+    "i18next": "^17.2.0",
+    "i18next-browser-languagedetector": "^3.1.1",
+    "i18next-xhr-backend": "^3.2.0",
+    "lodash-es": "^4.17.15",
+    "moment": "^2.24.0",
+    "normalize.css": "^8.0.1",
+    "plotly.js": "^1.50.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "react-i18next": "^10.13.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^4.4.0-beta.8",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.4",
+    "redux-act": "^1.7.7",
+    "redux-form": "^8.2.6",
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/i18next-xhr-backend": "^1.4.2",
+    "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^5.2.1",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.2",
+    "express": "^4.17.1",
+    "extract-css-chunks-webpack-plugin": "^4.6.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.7.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "stylus-supremacy": "^2.14.0",
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "terser-webpack-plugin": "^1.4.1",
+    "translate-json-object": "^2.3.3",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.0",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-react-a11y": "^1.0.0",
+    "typescript": "^3.6.4",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ],
+    "production": [
+      "iOS >= 11",
+      "ChromeAndroid >= 63",
+      "Chrome >= 56",
+      "Edge >= 14",
+      "Firefox >= 57",
+      "Safari >= 11"
+    ]
+  },
+  "engines": {
+    "node": "10.16.3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "extends": ["tslint-config-airbnb", "tslint-react-a11y"],
+  "rules": {
+    "arrow-parens": true,
+    "ter-arrow-parens": true,
+    "ter-indent": [
+      2,
+      2
+    ],
+    "max-line-length": [
+      true,
+      120
+    ],
+    "align": [
+      true,
+      "members",
+      "parameters",
+      "statements",
+      "elements"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "allow-leading-underscore"
+    ],
+    "semicolon": [true, "never"],
+    "no-console": [true, "log", "error", "dir"],
+    "import-name": false
+  }
+}

@@ -1,0 +1,59 @@
+@import '~@style/variables'
+
+.twoColumn {
+	display: flex
+	flex-flow: row wrap
+}
+
+.fieldsContainer {
+	display: flex
+	flex-direction: column
+	flex: 50%
+
+	&:nth-child(2) {
+		padding-left: 2 * $padding
+	}
+}
+
+.editControl {
+	text-align: right
+}
+
+.colorContainer {
+	display: flex
+	align-items: center
+	margin: 0.5rem 0
+}
+
+.colorPicker {
+	width: 60px
+	height: 40px
+	margin-right: 1rem
+	background: var(--colorBackground)
+	cursor: pointer
+
+	/* Remove double padding in webkit */
+	&::-webkit-color-swatch-wrapper {
+		padding: 0
+	}
+
+	&:disabled {
+		cursor: default
+	}
+}
+
+.controlButtons {
+	& > button:not(:last-child) {
+		margin-right: $padding
+	}
+}
+
+@media (max-width: $screen-tablet) {
+	.fieldsContainer {
+		flex: 100%
+
+		&:nth-child(2) {
+			padding-left: 0
+		}
+	}
+}

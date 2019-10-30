@@ -1,0 +1,68 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Dev backend for react typescript course",
+  "main": "bin/www.js",
+  "scripts": {
+    "dev": "nodemon bin/www.js",
+    "start": "cross-env NODE_ENV=production bin/www.js",
+    "lint": "eslint *.js",
+    "lint:fix": "npm run lint --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
+  "private": true,
+  "keywords": [
+    "postgres",
+    "sequelize"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iMaximal/react-typescript-course.git"
+  },
+  "homepage": "https://github.com/iMaximal/react-typescript-course#readme",
+  "author": "Maksim Golitsyn",
+  "license": "Commercial",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "connect-session-sequelize": "^6.0.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "debug": "^4.1.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^3.2.1",
+    "express-session": "^1.16.2",
+    "helmet": "^3.14.0",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.12.1",
+    "sequelize": "^5.19.0",
+    "socket.io": "^2.2.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "lint-staged": "^9.2.5",
+    "nodemon": "^1.19.1"
+  }
+}
