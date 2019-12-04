@@ -12,7 +12,7 @@ type Dispatch = ThunkDispatch<IRootState, void, AnyAction>
 
 const mockStore = configureMockStore<IRootState, Dispatch>([thunk])
 
-const routerState: RouterState = {
+export const routerState: RouterState = {
   location: {
     pathname: '/',
     search: '',
@@ -22,7 +22,7 @@ const routerState: RouterState = {
   action: 'POP',
 }
 
-const rootStateMock: IRootState = {
+export const rootStateMock: IRootState = {
   user: {
     loading: false,
     loaded: true,

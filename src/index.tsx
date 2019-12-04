@@ -7,7 +7,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Provider } from 'react-redux'
 import './i18n'
 
-import App from './App'
+import { AppContainer } from './App'
 
 import registerServiceWorker from './registerServiceWorker'
 import { store, history } from '@src/store/store'
@@ -19,7 +19,7 @@ responseInterceptor(store)
 const app = (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App />
+      <AppContainer />
     </ConnectedRouter>
   </Provider>
 )

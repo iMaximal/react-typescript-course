@@ -24,7 +24,7 @@ const Chart = React.lazy(() => import('@pages/LineChart/LineChart'))
 
 export type TProps = RouteComponentProps & IMapDispatchToProps & IMapStateToProps
 
-const App: React.FC<TProps> = (props) => {
+export const App: React.FC<TProps> = (props) => {
   const { authChecked, checkAuthentication } = props
 
   React.useEffect(() => {
@@ -89,7 +89,7 @@ const mapDispatchToProps = (dispatch: ReduxDispatch): IMapDispatchToProps => {
   }
 }
 
-export default withRouter(
+export const AppContainer = withRouter(
   connect(
     mapStateToProps,
     mapDispatchToProps,
