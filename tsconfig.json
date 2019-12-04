@@ -52,6 +52,9 @@
       ],
       "@store/*": [
         "src/store/*"
+      ],
+      "@mocks/*": [
+        "src/__mocks__/*"
       ]
     }
   },
