@@ -41,5 +41,4 @@ describe('<Dashboard />', () => {
     expect(wrapper.find('main').length).toBe(1)
     expect(wrapper.find('Can').length).toBe(1)
   })
-
 })

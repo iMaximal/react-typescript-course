@@ -1,13 +1,7 @@
-import {
-  errorCacheState,
-  initialCacheState,
-  successCacheState,
-  validDataFetched,
-} from '@src/cache'
+import { errorCacheState, initialCacheState, successCacheState, validDataFetched } from '@src/cache'
 
 describe('cache functions', () => {
   describe('validDataFetched', () => {
-
     it('should return false for initial cache state', () => {
       expect(validDataFetched(initialCacheState)).toBeFalsy()
     })
@@ -60,11 +54,11 @@ describe('cache functions', () => {
 
   describe('fetchingCacheState', () => {
     it('should return correct state', () => {
-        expect(errorCacheState()).toEqual({
-          loading: false,
-          loaded: false,
-          failed: true,
-        })
+      expect(errorCacheState()).toEqual({
+        loading: false,
+        loaded: false,
+        failed: true,
       })
     })
+  })
 })

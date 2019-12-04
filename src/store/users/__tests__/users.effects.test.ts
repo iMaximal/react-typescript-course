@@ -46,10 +46,7 @@ describe('Users commands', () => {
 
       await store.dispatch(Effects.fetchUsers(cancelToken))
 
-      expect(axiosMock.get).toHaveBeenCalledWith(
-        '/user/all/',
-        { cancelToken },
-      )
+      expect(axiosMock.get).toHaveBeenCalledWith('/user/all/', { cancelToken })
       expect(fetchUsersBeginSpy).toBeCalled()
       expect(fetchUsersSuccessSpy).toBeCalled()
     })
@@ -84,7 +81,6 @@ describe('Users commands', () => {
       await store.dispatch(Effects.fetchUsers(cancelToken))
 
       expect(fetchUsersFailureSpy).not.toBeCalled()
-
     })
 
     it('should handle error', async () => {

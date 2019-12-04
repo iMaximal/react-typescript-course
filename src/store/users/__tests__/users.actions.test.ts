@@ -1,12 +1,7 @@
-import {
-  fetchUsersErrorAction,
-  fetchUsersStartAction,
-  fetchUsersSuccessAction,
-} from '@store/users/users.actions'
+import { fetchUsersErrorAction, fetchUsersStartAction, fetchUsersSuccessAction } from '@store/users/users.actions'
 import { usersMock } from '@mocks/users.mock'
 
 describe('users actions', () => {
-
   describe('fetchUsersStartAction', () => {
     it('should create action with following text', () => {
       expect(fetchUsersStartAction()).toEqual({
