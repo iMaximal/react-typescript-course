@@ -1,6 +1,6 @@
 import { mount, shallow, render } from 'enzyme'
-import React from 'react'
-import { Switch, MemoryRouter } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { Switch, Redirect, MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { I18nextProvider } from 'react-i18next'
 import { StylesProvider, ThemeProvider } from '@material-ui/styles'
@@ -47,7 +47,7 @@ describe('<App />', () => {
     })
   })
 
-  it('should contain specific components if user is logged in via shallow', () => {
+  it('should contain specific components if user is logged in via shallow (search by Text)', () => {
     const wrapper = shallow(<App {...props} />)
     expect(wrapper.find('ThemeProvider')).toHaveLength(1)
     expect(wrapper.find('Suspense')).toHaveLength(1)
@@ -57,19 +57,19 @@ describe('<App />', () => {
     expect(wrapper.find('Redirect')).toHaveLength(3)
   })
 
-  it('should contain specific components if user is not logged in via shallow', () => {
+  it('should contain specific components if user is not logged in via shallow (search by Component is prefer)', () => {
     const calculatedProps = {
       ...props,
       isAuthenticated: false,
     }
 
     const wrapper = shallow(<App {...calculatedProps} />)
-    expect(wrapper.find('ThemeProvider')).toHaveLength(1)
+    expect(wrapper.find(ThemeProvider)).toHaveLength(1)
     expect(wrapper.find('Suspense')).toHaveLength(1)
-    expect(wrapper.find('withI18nextTranslation(Connect(Notification))')).toHaveLength(1)
-    expect(wrapper.find('Switch')).toHaveLength(1)
-    expect(wrapper.find('RouteWithLayout')).toHaveLength(2)
-    expect(wrapper.find('Redirect')).toHaveLength(1)
+    expect(wrapper.find(Notification)).toHaveLength(1)
+    expect(wrapper.find(Switch)).toHaveLength(1)
+    expect(wrapper.find(RouteWithLayout)).toHaveLength(2)
+    expect(wrapper.find(Redirect)).toHaveLength(1)
   })
 
   describe('App via mount', () => {
@@ -141,6 +141,30 @@ describe('<App />', () => {
       expect(wrapper.find(RouteWithLayout)).toHaveLength(1)
       expect(wrapper.find(Dashboard)).toHaveLength(0)
       expect(wrapper.find(NotFoundPage)).toHaveLength(1)
+      expect(wrapper.find(Login)).toHaveLength(0)
+      expect(wrapper.find(Logout)).toHaveLength(0)
+    })
+
+    it('should not show components if authChecked if false', () => {
+      const calculatedProps = {
+        ...props,
+        authChecked: false,
+      }
+
+      const wrapper = mount(
+        <MemoryRouter>
+          <Provider store={getMockedStore({})}>
+            <App {...calculatedProps} />
+          </Provider>
+        </MemoryRouter>,
+      )
+
+      expect(wrapper.find(ThemeProvider)).toHaveLength(1)
+      expect(wrapper.find(StylesProvider)).toHaveLength(1)
+      expect(wrapper.find(Notification)).toHaveLength(1)
+      expect(wrapper.find(Switch)).toHaveLength(0)
+      expect(wrapper.find(RouteWithLayout)).toHaveLength(0)
+      expect(wrapper.find(Dashboard)).toHaveLength(0)
       expect(wrapper.find(Login)).toHaveLength(0)
       expect(wrapper.find(Logout)).toHaveLength(0)
     })
