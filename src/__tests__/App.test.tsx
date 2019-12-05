@@ -26,7 +26,7 @@ const props = {
 
 describe('<App />', () => {
   describe('how to wrap AppContainer', () => {
-    it('should works', () => {
+    it('should work', () => {
       const wrapper = mount(
         <Provider store={getMockedStore({})}>
           <I18nextProvider i18n={i18nMock}>
@@ -57,7 +57,7 @@ describe('<App />', () => {
     expect(wrapper.find('Redirect')).toHaveLength(3)
   })
 
-  it('should contain specific components if the user is not logged in via shallow', () => {
+  it('should contain specific components if user is not logged in via shallow', () => {
     const calculatedProps = {
       ...props,
       isAuthenticated: false,
@@ -102,7 +102,7 @@ describe('<App />', () => {
       expect(wrapper.find(Logout)).toHaveLength(0)
     })
 
-    it('should contain specific components if the user is not logged in via mount', () => {
+    it('should contain specific components if user is not logged in via mount', () => {
       const calculatedProps = {
         ...props,
         isAuthenticated: false,
