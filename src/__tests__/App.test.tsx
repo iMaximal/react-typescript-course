@@ -57,7 +57,7 @@ describe('<App />', () => {
     expect(wrapper.find('Redirect')).toHaveLength(3)
   })
 
-  it('should contain specific components if user is not logged in via shallow (search by Component is prefer)', () => {
+  it('should contain specific components if user is not logged in (search by Component is preferable)', () => {
     const calculatedProps = {
       ...props,
       isAuthenticated: false,
@@ -74,7 +74,7 @@ describe('<App />', () => {
 
   describe('App via mount', () => {
     it('should call checkAuthentication when mounted', () => {
-      const wrapper = mount(
+      mount(
         <MemoryRouter>
           <Provider store={getMockedStore({})}>
             <App {...props} />
@@ -145,7 +145,7 @@ describe('<App />', () => {
       expect(wrapper.find(Logout)).toHaveLength(0)
     })
 
-    it('should not show components if authChecked if false', () => {
+    it('should not show components if authChecked is false', () => {
       const calculatedProps = {
         ...props,
         authChecked: false,

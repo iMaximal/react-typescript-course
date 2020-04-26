@@ -2,6 +2,7 @@ import * as React from 'react'
 import { SubmissionError } from 'redux-form'
 import { Trans } from 'react-i18next'
 import { AxiosError } from 'axios'
+import { IErrorResponse } from '@src/interfaces'
 
 export const handleSubmissionError = (error: AxiosError) => {
   if (!error.response) return
@@ -24,7 +25,7 @@ export const handleSubmissionError = (error: AxiosError) => {
     const formErrors = {}
 
     // for form fields
-    data.errors.map((e = { message: '', path: '' }) => {
+    data.errors.map((e: IErrorResponse) => {
       if (e.message && e.path) {
         formErrors[e.path] = <Trans>{`messages.${e.message}`}</Trans>
       }

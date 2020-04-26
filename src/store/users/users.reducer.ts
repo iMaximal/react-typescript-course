@@ -11,12 +11,12 @@ import { errorCacheState, fetchingCacheState, initialCacheState, successCacheSta
 
 export const initialState: IUsersState = {
   list: [],
-  ...initialCacheState,
+  ...initialCacheState(),
 }
 
 const reducers = createReducer<typeof initialState>({}, initialState)
 
-reducers.on(fetchUsersStartAction, (state: IUsersState): IUsersState => ({ ...state, ...fetchingCacheState }))
+reducers.on(fetchUsersStartAction, (state: IUsersState): IUsersState => ({ ...state, ...fetchingCacheState() }))
 
 reducers.on(fetchUsersErrorAction, (state: IUsersState): IUsersState => ({ ...state, ...errorCacheState() }))
 

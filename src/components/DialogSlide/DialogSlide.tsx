@@ -10,9 +10,11 @@ interface IProps {
   description: string
 }
 
-const Transition = React.forwardRef<unknown, TransitionProps>((props, ref) => {
-  return <Slide direction="up" ref={ref} {...props} />
-})
+const Transition = React.forwardRef<unknown, TransitionProps & { children?: React.ReactElement<any, any> }>(
+  (props, ref) => {
+    return <Slide direction="up" ref={ref} {...props} />
+  },
+)
 
 const DialogSlide: React.FC<IProps> = ({ onClose, onConfirm, title, description }) => {
   const { t } = useTranslation()

@@ -21,7 +21,7 @@ export const initialState: IUserState = null
 
 const reducers = createReducer<typeof initialState>({}, initialState)
 
-reducers.on(fetchUserStartAction, (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState }))
+reducers.on(fetchUserStartAction, (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState() }))
 
 reducers.on(fetchUserErrorAction, (state: IUserState): IUserState => ({ ...state, ...errorCacheState() }))
 
@@ -30,7 +30,7 @@ reducers.on(
   (state: IUserState, payload: IUserModel): IUserState => ({ ...state, ...payload, ...successCacheState() }),
 )
 
-reducers.on(signupUserStartAction, (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState }))
+reducers.on(signupUserStartAction, (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState() }))
 
 reducers.on(signupUserErrorAction, (state: IUserState): IUserState => ({ ...state, ...errorCacheState() }))
 
@@ -41,7 +41,7 @@ reducers.on(
 
 reducers.on(
   checkUserAuthenticationStartAction,
-  (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState }),
+  (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState() }),
 )
 
 reducers.on(
@@ -59,7 +59,7 @@ reducers.on(
   }),
 )
 
-reducers.on(logoutUserStartAction, (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState }))
+reducers.on(logoutUserStartAction, (state: IUserState): IUserState => ({ ...state, ...fetchingCacheState() }))
 
 reducers.on(logoutUserSuccessAction, (): IUserState => ({ ...initialState, ...successCacheState() }))
 

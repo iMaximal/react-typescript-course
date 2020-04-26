@@ -3,12 +3,12 @@ import { errorCacheState, initialCacheState, successCacheState, validDataFetched
 describe('cache functions', () => {
   describe('validDataFetched', () => {
     it('should return false for initial cache state', () => {
-      expect(validDataFetched(initialCacheState)).toBeFalsy()
+      expect(validDataFetched(initialCacheState())).toBeFalsy()
     })
 
     it('should return false if loaded and force is true', () => {
       const calculatedState = {
-        ...initialCacheState,
+        ...initialCacheState(),
         loaded: true,
       }
       expect(validDataFetched(calculatedState, true)).toBeFalsy()
@@ -16,7 +16,7 @@ describe('cache functions', () => {
 
     it('should return false if loaded and failed is true', () => {
       const calculatedState = {
-        ...initialCacheState,
+        ...initialCacheState(),
         failed: true,
       }
       expect(validDataFetched(calculatedState, true)).toBeFalsy()
@@ -24,7 +24,7 @@ describe('cache functions', () => {
 
     it('should return true if loaded and failed is false', () => {
       const calculatedState = {
-        ...initialCacheState,
+        ...initialCacheState(),
         failed: false,
       }
       expect(validDataFetched(calculatedState, true)).toBeFalsy()
