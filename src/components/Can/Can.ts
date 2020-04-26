@@ -41,7 +41,12 @@ interface IProps {
 }
 
 const Can = (props: IProps) => {
-  const { role } = useSelector<IRootState, IUserState>((state) => state.user)
+  let role = null
+
+  const userData = useSelector<IRootState, IUserState>((state) => state.user)
+  if (userData && userData.role) {
+    role = userData.role
+  }
 
   return check(rules, role, props.perform, props.data) ? props.yes() : props.no()
 }

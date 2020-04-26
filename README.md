@@ -99,6 +99,7 @@ start dev mode:
 ```bash
 npm run start
 ```
+open http://localhost:8000/
 
 make build for production:
 

@@ -1,6 +1,7 @@
 import { ICacheState } from '@src/interfaces'
 
-export const validDataFetched = (state: ICacheState, force: boolean = false) => !force && state.loaded && !state.failed
+export const validDataFetched = (state: ICacheState, force: boolean = false): boolean =>
+  !force && state.loaded && !state.failed
 
 export const successCacheState = () => ({ loading: false, loaded: true, failed: false, lastUpdate: new Date() })
 export const errorCacheState = () => ({ loading: false, loaded: false, failed: true })

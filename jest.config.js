@@ -14,6 +14,7 @@ module.exports = {
   setupFiles: ['<rootDir>/scripts/jest.setup.ts'],
   moduleNameMapper: {
     '\\.(css|less|styl|scss|sass)$': 'identity-obj-proxy',
+    '^lodash-es$': 'lodash',
     ...pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */ ),
   },
   roots: ['./src'],
@@ -31,7 +32,7 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/scripts/fileTransformer.js',
   },
   transformIgnorePatterns: [
-    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'
   ],
   testRegex: '.*\\.test\\.(ts|tsx)$',
   snapshotSerializers: ['enzyme-to-json/serializer'],
