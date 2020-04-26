@@ -40,7 +40,7 @@ Technologies: React, TypeScript, Redux, PostgreSQL, Sequelize.
 
 install nodejs
 
-install PostgreSQL 11
+install PostgreSQL 11 or later
 
 Windows:
 
@@ -57,12 +57,9 @@ You're smart guys
 
 follow the instruction:
 
-https://github.com/nodejs/node-gyp
-
 install Python 2.7
 
-install Desktop development with C++
-
+https://github.com/nodejs/node-gyp (instruction in the course)
 
 in root folder:
 ```bash

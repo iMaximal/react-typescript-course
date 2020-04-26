@@ -13,7 +13,7 @@ import { errorCacheState, fetchingCacheState, initialCacheState, successCacheSta
 
 export const initialState: IUsersEditState = {
   data: null,
-  ...initialCacheState,
+  ...initialCacheState(),
 }
 
 const reducers = createReducer<typeof initialState>({}, initialState)
@@ -22,7 +22,7 @@ reducers.on(
   fetchUserByIdStartAction,
   (state: IUsersEditState): IUsersEditState => ({
     ...state,
-    ...fetchingCacheState,
+    ...fetchingCacheState(),
   }),
 )
 
@@ -47,7 +47,7 @@ reducers.on(
   saveUserStartAction,
   (state: IUsersEditState): IUsersEditState => ({
     ...state,
-    ...fetchingCacheState,
+    ...fetchingCacheState(),
   }),
 )
 
