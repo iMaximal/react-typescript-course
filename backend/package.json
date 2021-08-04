@@ -54,7 +54,7 @@
     "passport-local": "^1.0.0",
     "pg": "^7.18.2",
     "sequelize": "^5.21.7",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
