@@ -63,7 +63,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^4.3.5",
     "@types/redux-form": "^8.2.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "clsx": "^1.1.0",
     "connected-react-router": "^6.8.0",
     "history": "^4.10.1",
