@@ -71,7 +71,7 @@
     "i18next-browser-languagedetector": "^3.1.1",
     "i18next-xhr-backend": "^3.2.2",
     "lodash-es": "^4.17.21",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "normalize.css": "^8.0.1",
     "plotly.js": "^1.53.0",
     "react": "^16.13.1",
